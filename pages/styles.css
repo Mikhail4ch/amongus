@@ -13,7 +13,7 @@ html,body {
   header, footer {
     background: #333;
     color: #FFF;
-    padding: 20px;
+    padding: 0px;
   }
   
   main {
@@ -61,7 +61,32 @@ html,body {
     background: #0050A0;
   }
   img {
-    position: relative;
-    left: 200px;
-    height: 1;
+   position: fixed;
+   top: 20px;
+   bottom: 10px;
+   left: 130px;
   }
+  .image {
+    background: url(../images/google.png ) no-repeat;
+  }
+  .inputWithIcon {
+    position: relative;
+  }
+  .inputWithIcon i {
+  position: absolute;
+  right: -30px;
+  top: -5px;
+  padding: 25px;
+  }
+  .imageS {
+    background: url(../images/211891_apple_social_icon.png) no-repeat;
+  }
+  .InputWithIcon {
+    position: relative;
+  }
+  .InputWithIcon i {
+    position: absolute;
+    right: -30px;
+    top: -5px;
+    padding: 25px;
+    }
