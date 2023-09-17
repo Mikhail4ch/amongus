@@ -1,92 +1,151 @@
-html,body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  header, footer {
-    background: #333;
-    color: #FFF;
-    padding: 0px;
-  }
-  
-  main {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #EEE;
-  }
-  
-  .content {
-    max-width: 400px;
-    padding: 40px;
-    background: #FFF;
-    border-radius: 10px;
-  }
-  
-  .input-box {
-    margin-bottom: 20px;
-  }
-  
-  .input-box input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #AAA;
-    border-radius: 5px;
-  }
-  
-  .input-box label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .button {
-    width: 110%;
-    padding: 10px;
-    background: #0070E0;
-    color: #FFF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .button:hover {
-    background: #0050A0;
-  }
-  img {
-   position: fixed;
-   top: 20px;
-   bottom: 10px;
-   left: 130px;
-  }
-  .image {
-    background: url(../images/google.png ) no-repeat;
-  }
-  .inputWithIcon {
-    position: relative;
-  }
-  .inputWithIcon i {
+* {
+  padding: 0;
+  margin: 0;
+}
+.left {
+  grid-area: left;
+  position: fixed;
+}
+.right {
+  grid-area: right;
+}
+.header {
+grid-area: header;
+}
+.main {
+grid-area: main;
+}
+footer {
+  grid-area: footer;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.a{
+  grid-area: a;
+}
+.b{
+  grid-area: b;
+}
+.c{
+  grid-area: c;
+}
+.d{
+  grid-area: d;
+}
+.e{
+  grid-area: e;
+}
+.container {
+  display: grid;
+  grid-template-areas: "left header header header right"
+                       "main main main main main"
+                       "a b c d e";
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 50px 1fr 130px;
+  min-height: 100vh;
+}
+span {
+  float: right;
+}
+h1 {
+  padding: 30px;
+  color: #070707e1;
+  top: -15px;
+  position: fixed;
+  left: 25px;
+}
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #EEE;
+}
+
+.content {
+  max-width: 400px;
+  padding: 40px;
+  background: #FFF;
+  border-radius: 10px;
+}
+
+.input-box {
+  margin-bottom: 20px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #AAA;
+  border-radius: 5px;
+}
+
+.input-box label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.button {
+  width: 110%;
+  padding: 10px;
+  background: #0070E0;
+  color: #FFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #0050A0;
+}
+h2 {
+  margin-bottom: 10px;
+}
+.image {
+  background: url(../images/google.png ) no-repeat;
+}
+.inputWithIcon {
+  position: relative;
+}
+.inputWithIcon i {
+position: absolute;
+right: -30px;
+top: -5px;
+padding: 25px;
+}
+.imageS {
+  background: url(../images/211891_apple_social_icon.png) no-repeat;
+}
+.InputWithIcon {
+  position: relative;
+}
+.InputWithIcon i {
   position: absolute;
   right: -30px;
   top: -5px;
   padding: 25px;
   }
-  .imageS {
-    background: url(../images/211891_apple_social_icon.png) no-repeat;
-  }
-  .InputWithIcon {
+  h3 {
+    font-size: x-large;
     position: relative;
+    top: 80px;
   }
-  .InputWithIcon i {
-    position: absolute;
-    right: -30px;
-    top: -5px;
-    padding: 25px;
-    }
+  @media screen and (max-width: 992px) {
+    .container {
+    grid-template-areas: "left"
+    "main"
+    "a"
+    "b"
+    "c"
+    "d"
+    "e";
+    grid-template-columns: 100%;
+    grid-template-rows: 30px 1fr 80px 80px 80px 80px 80px;
+  }
+  h3 {
+    font-size: x-large;
+    position: relative;
+    top: 30px;
+}
+  }
