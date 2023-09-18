@@ -20,6 +20,7 @@ footer {
   background-color: black;
   color: white;
   text-align: center;
+  height: min-content;
 }
 .a{
   grid-area: a;
@@ -129,23 +130,23 @@ padding: 25px;
   h3 {
     font-size: x-large;
     position: relative;
-    top: 80px;
+    margin-top: 80px;
   }
   @media screen and (max-width: 992px) {
-    .container {
-    grid-template-areas: "left"
-    "main"
-    "a"
-    "b"
-    "c"
-    "d"
-    "e";
-    grid-template-columns: 100%;
-    grid-template-rows: 30px 1fr 80px 80px 80px 80px 80px;
+    
+  footer {
+    grid-area: footer;
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: min-content;
+    
   }
+
   h3 {
-    font-size: x-large;
+    font-size: large;
     position: relative;
-    top: 30px;
-}
+    margin-top: 30px;
+  }
+
   }
