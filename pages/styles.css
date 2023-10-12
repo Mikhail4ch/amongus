@@ -20,30 +20,23 @@ footer {
   background-color: black;
   color: white;
   text-align: center;
-  height: min-content;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
-.a{
-  grid-area: a;
-}
-.b{
-  grid-area: b;
-}
-.c{
-  grid-area: c;
-}
-.d{
-  grid-area: d;
-}
-.e{
-  grid-area: e;
+footer > section {
+  font-size: 25px;
+  padding: 10px;
+  font-weight: bold;
+  width: 250px;
 }
 .container {
   display: grid;
   grid-template-areas: "left header header header right"
                        "main main main main main"
-                       "a b c d e";
-  grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: 50px 1fr 130px;
+                       "footer footer footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 50px 3fr 1fr;
   min-height: 100vh;
 }
 span {
@@ -80,6 +73,7 @@ main {
   padding: 10px;
   border: 1px solid #AAA;
   border-radius: 5px;
+  padding-bottom: 12px;
 }
 
 .input-box label {
@@ -132,21 +126,4 @@ padding: 25px;
     position: relative;
     margin-top: 80px;
   }
-  @media screen and (max-width: 992px) {
-    
-  footer {
-    grid-area: footer;
-    background-color: black;
-    color: white;
-    text-align: center;
-    height: min-content;
-    
-  }
-
-  h3 {
-    font-size: large;
-    position: relative;
-    margin-top: 30px;
-  }
-
-  }
+ 
